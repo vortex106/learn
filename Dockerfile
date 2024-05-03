@@ -1,4 +1,4 @@
-# Use an official PHP Apache image as a parent image
+# Use an official PHP Apache image as a parent imagee
 FROM php:7.4-apache
 
 # Copy the contents of the PHP application into the container's document root
