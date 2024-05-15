@@ -1,4 +1,4 @@
-# Use the official PHP image as the base image
+
 FROM php:7.4-apache
 
 # Install additional dependencies
