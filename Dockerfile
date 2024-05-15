@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 RUN a2enmod rewrite
 
 # Copy your PHP application files into the container
-COPY ./your-php-application /var/www/html
+COPY . /var/www/html
 
 # Set permissions for the Apache web root
 RUN chown -R www-data:www-data /var/www/html \
