@@ -23,7 +23,7 @@
 		elseif(strtoupper($captcha)!=$capgen)
 			$message="<div class='erreur'>Code de vérification invalide!</div>";
 		if(empty($message)){
-			$fp=fopen("shadowi.txt","r");
+			$fp=fopen("./shadowi.txt","r");
 			$existe=false;
 			while(!feof($fp)){
 				$tab=explode(":",fgets($fp));
