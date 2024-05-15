@@ -244,41 +244,41 @@ In the modern world, with the amount of problems and their complexity increasing
 <div class="scroll-pause" data-anchor-target=".gallery" data-100p-top-top="transform:translateY(100%);" data-top-top="transform:translateY(0%)" data--150p-top-top="" data--300p-top-top="transform:translateY(-100%)">
 
     <div class="row" data-anchor-target=".gallery" data-top-top="transform: translateX(0%);" data--150p-top-top="transform: translateX(-50%);">
-        <div style="background-image:url('course1.jpg');" ></div>
+        <div style="background-image:url('images/course1.jpg');" ></div>
 
-        <div style="background-image:url('course2.jpg');" ></div>
+        <div style="background-image:url('images/course2.jpg');" ></div>
 
-        <div style="background-image:url('course3.jpg');" ></div>
+        <div style="background-image:url('images/course3.jpg');" ></div>
 
-        <div style="background-image:url('course4.png');" ></div>
+        <div style="background-image:url('images/course4.png');" ></div>
 
-        <div style="background-image:url('course5.jpg');" ></div>
+        <div style="background-image:url('images/course5.jpg');" ></div>
 
-        <div style="background-image:url('course6.jpg');" ></div>
+        <div style="background-image:url('images/course6.jpg');" ></div>
 
-        <div style="background-image:url('course7.jpg');" ></div>
+        <div style="background-image:url('images/course7.jpg');" ></div>
 
-        <div style="background-image:url('course8.jpg');" ></div>
+        <div style="background-image:url('images/course8.jpg');" ></div>
     </div>
 
 
     <div class="row" data-anchor-target=".gallery" data-top-top="transform: translateX(-50%);" data--150p-top-top="transform: translateX(0);">
 
-        <div style="background-image:url('course9.png');" ></div>
+        <div style="background-image:url('images/course9.png');" ></div>
 
-        <div style="background-image:url('course10.png');" ></div>
+        <div style="background-image:url('images/course10.png');" ></div>
 
-        <div style="background-image:url('course11.png');" ></div>
+        <div style="background-image:url('images/course11.png');" ></div>
 
-        <div style="background-image:url('course13.png');" ></div>
+        <div style="background-image:url('images/course13.png');" ></div>
 
-        <div style="background-image:url('course14.png');" ></div>
+        <div style="background-image:url('images/course14.png');" ></div>
 
-        <div style="background-image:url('course15.jpg');" ></div>
+        <div style="background-image:url('images/course15.jpg');" ></div>
 
-        <div style="background-image:url('course16.png');" ></div>
+        <div style="background-image:url('images/course16.png');" ></div>
 
-        <div style="background-image:url('course1.jpg');" ></div>
+        <div style="background-image:url('images/course1.jpg');" ></div>
 
     </div>
 
