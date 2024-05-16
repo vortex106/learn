@@ -1,28 +1,25 @@
-# Use the official PHP image as the base image
-FROM php:7.4-apache
+# Use the official PHP image with Apache
+FROM php:8.0-apache
 
-# Install additional dependencies
-RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    libzip-dev \
-    unzip \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd mysqli pdo_mysql zip
+# Copy the source code into the /var/www/html directory in the container
+COPY . /var/www/html/
 
-# Enable Apache modules
+# Install necessary PHP extensions (if needed)
+RUN docker-php-ext-install mysqli
+
+# Enable Apache modules (if needed)
 RUN a2enmod rewrite
 
-# Copy your PHP application files into the container
-COPY ./home.php /var/www/html
+# Set the working directory
+WORKDIR /var/www/html
 
-# Set permissions for the Apache web root
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+# Specify home.php as the default document (choose one option)
+
+# Option 1: Using Docker Default Document
+RUN echo "DirectoryIndex home.php" >> /etc/apache2/sites-available/000-default.conf
+
+# Option 2: Using Custom Apache Configuration (create custom.conf file as instructed)
+# RUN a2enmod rewrite && cp /path/to/your/custom.conf /etc/apache2/sites-enabled/000-default.conf
 
 # Expose port 80
 EXPOSE 80
-
-# Start Apache service
-CMD ["apache2-foreground"]
