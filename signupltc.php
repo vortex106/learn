@@ -31,7 +31,7 @@
 					
 				}
 			}
-			fputs($fp,$nom.":".$prenom.":".$login.":".md5($pass1)."\n");
+			fputs(true,$fp,$nom.":".$prenom.":".$login.":".md5($pass1)."\n");
 			header("location:loginltc.php");
 			
 		}
