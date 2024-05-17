@@ -23,17 +23,21 @@
 		elseif(strtoupper($captcha)!=$capgen)
 			$message="<div class='erreur'>Code de vérification invalide!</div>";
 		if(empty($message)){
-			$fp=fopen("shadowi.txt","a+");
+			$fp=fopen("shadow.txt","r");
+			$existe=false;
 			while(!feof($fp)){
 				$tab=explode(":",fgets($fp));
 				if($tab[2]==$login){
 					$message="<div class='erreur'>Login existe déjà!</div>";
-					
+					$existe=true;
+					break;
 				}
 			}
-			fputs(true,$fp,$nom.":".$prenom.":".$login.":".md5($pass1)."\n");
-			header("location:loginltc.php");
-			
+			if(!$existe){
+				$fp=fopen("shadow.txt","a+");
+				fputs($fp,$nom.":".$prenom.":".$login.":".md5($pass1)."\n");
+				header("location:loginltc.php");
+			}
 		}
 	}
 ?>
