@@ -30,7 +30,7 @@
 				if($tab[2]==$login){
 					$message="<div class='erreur'>Login existe déjà!</div>";
 					$existe=true;
-					;
+					
 				}
 			}
 			if(!$existe){
