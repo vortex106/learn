@@ -1,17 +1,19 @@
 # Use the official PHP image with Apache
 FROM php:8.0-apache
 
+
+# Set the working directory
+WORKDIR /var/www/html
+
 # Copy the source code into the /var/www/html directory in the container
-COPY . /var/www/html/
+COPY . .
+RUN chmod 777 ./project/shadowi.txt
 
 # Install necessary PHP extensions (if needed)
 RUN docker-php-ext-install mysqli
 
 # Enable Apache modules (if needed)
 RUN a2enmod rewrite
-
-# Set the working directory
-WORKDIR /var/www/html
 
 # Specify home.php as the default document (choose one option)
 
