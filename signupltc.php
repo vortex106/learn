@@ -24,20 +24,17 @@
 			$message="<div class='erreur'>Code de vérification invalide!</div>";
 		if(empty($message)){
 			$fp=fopen("shadowi.txt","r");
-			$existe=false;
 			while(!feof($fp)){
 				$tab=explode(":",fgets($fp));
 				if($tab[2]==$login){
 					$message="<div class='erreur'>Login existe déjà!</div>";
-					$existe=true;
 					
 				}
 			}
-			if(!$existe){
-				$fp=fopen("shadowi.txt","a+");
-				fputs($fp,$nom.":".$prenom.":".$login.":".md5($pass1)."\n");
-				header("location:loginltc.php");
-			}
+			$fp=fopen("shadowi.txt","a+");
+			fputs($fp,$nom.":".$prenom.":".$login.":".md5($pass1)."\n");
+			header("location:loginltc.php");
+			
 		}
 	}
 ?>
