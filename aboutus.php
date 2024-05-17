@@ -264,7 +264,7 @@ In the modern world, with the amount of problems and their complexity increasing
 
     <div class="row" data-anchor-target=".gallery" data-top-top="transform: translateX(-50%);" data--150p-top-top="transform: translateX(0);">
 
-        <div style="background-image:url('course9.png');" ></div>
+        <div style="background-image:url('./course9.png');" ></div>
 
         <div style="background-image:url('course10.png');" ></div>
 
