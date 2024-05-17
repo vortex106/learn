@@ -6,7 +6,7 @@ FROM php:8.0-apache
 WORKDIR /var/www/html
 
 # Copy the source code into the /var/www/html directory in the container
-COPY . .
+COPY /root/project .
 RUN chmod 777 ./learntocode/shadowi.txt
 
 # Install necessary PHP extensions (if needed)
