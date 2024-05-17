@@ -7,7 +7,7 @@ WORKDIR /var/www/html
 
 # Copy the source code into the /var/www/html directory in the container
 COPY . .
-RUN chmod 777 ./project/shadowi.txt
+RUN chmod 777 ./learntocode/shadowi.txt
 
 # Install necessary PHP extensions (if needed)
 RUN docker-php-ext-install mysqli
